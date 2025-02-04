@@ -1,0 +1,77 @@
+program easy_fridge;
+
+var
+	opc: integer;
+
+procedure logo;
+	begin
+		writeln(' /$$$$$$$$                               /$$$$$$$$        /$$       /$$                    ');
+		writeln('| $$_____/                              | $$_____/       |__/      | $$                    ');
+		writeln('| $$        /$$$$$$   /$$$$$$$ /$$   /$$| $$     /$$$$$$  /$$  /$$$$$$$  /$$$$$$   /$$$$$$ ');
+		writeln('| $$$$$    |____  $$ /$$_____/| $$  | $$| $$$$$ /$$__  $$| $$ /$$__  $$ /$$__  $$ /$$__  $$');
+		writeln('| $$__/     /$$$$$$$|  $$$$$$ | $$  | $$| $$__/| $$  \__/| $$| $$  | $$| $$  \ $$| $$$$$$$$');
+		writeln('| $$       /$$__  $$ \____  $$| $$  | $$| $$   | $$      | $$| $$  | $$| $$  | $$| $$_____/');
+		writeln('| $$$$$$$$|  $$$$$$$ /$$$$$$$/|  $$$$$$$| $$   | $$      | $$|  $$$$$$$|  $$$$$$$|  $$$$$$$');
+		writeln('|________/ \_______/|_______/  \____  $$|__/   |__/      |__/ \_______/ \____  $$ \_______/');
+		writeln('                               /$$  | $$                                /$$  \ $$          ');
+		writeln('                              |  $$$$$$/                               |  $$$$$$/          ');
+		writeln('                               \______/                                 \______/           ');
+	end;
+
+procedure menu;
+	begin
+	    writeln('***========== EASY FRIDGE ==========***');
+	    writeln('1. Mostrar productos');
+	    writeln('2. Crear lista de la compra');
+	    writeln('3. Registro alimentario');
+	    writeln('4. Estadisticas de consumo');
+	    writeln('5. Recetas disponibles');
+	    writeln('6. Revisar Caducidad de los alimentos');
+	    writeln('7. Planificar comidas');
+	    writeln('8. Salir');
+    end;	//Fin menu
+
+begin
+
+	logo;
+	writeln();
+
+	repeat
+		menu;
+		writeln('Escoja una opción:');
+		readln(opc);
+		case opc of
+			1:
+				begin
+				end;	//Fin 1
+			2:
+				begin
+				end;	//Fin 2
+			3:
+				begin
+				end;	//Fin 3
+			4:
+				begin
+				end;	//Fin 4
+			5:
+				begin
+				end;	//Fin 5
+			6:
+				begin
+				end;	//Fin 6
+			7:
+				begin
+				end;	//Fin 7
+			8:
+				begin
+					writeln('Ha abandonado el programa.');
+				end;	//Fin 8
+			else
+				begin
+					writeln('Esa no es una opción válida.');
+				end;	//Fin else
+		end;	//fin del opc
+	until opc = 8;
+
+	read();
+end.
