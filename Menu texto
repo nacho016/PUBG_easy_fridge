@@ -1,0 +1,9 @@
+PROCEDURE menu();
+    writeln('***========== EASY FRIDGE ==========***');
+    writeln('1. Mostrar productos');
+    writeln('2. Crear lista de la compra');
+    writeln('3. Registro alimentario');
+    writeln('4. Estadisticas de consumo');
+    writeln('5. Recetas disponibles');
+    writeln('6. Revisar Caducidad de los alimentos');
+    writeln('7. Planificar comidas');
