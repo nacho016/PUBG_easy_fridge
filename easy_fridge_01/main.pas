@@ -1,13 +1,17 @@
 program easy_fridge;
 
-uses uPilaElement, uTelement;
+uses uPilaElement, uTelement,umenu, crt ;
+
+
 
 var
 	opc: char;
     i: integer;
+    first: boolean;
 
 begin
     //CÓDIGO DE PRUEBA
+    logo;
     initialize(pila);
     comidas.des:= 'Café.';
     comidas.com:= 'Macarrones con tomatico.';
@@ -18,18 +22,11 @@ begin
     comidas.cen:= 'No hay cena, somos estudiantes';
     push(pila, comidas);
     //FIN DE CÓDIGO DE PRUEBA
-	repeat
-		writeln('***========== EASY FRIDGE ==========***');
-	    writeln('1. Productos en la nevera');
-	    writeln('2. Crear lista de la compra');
-	    writeln('3. Registro alimentario');
-	    writeln('4. Estadisticas de consumo');
-	    writeln('5. Recetas disponibles');
-	    writeln('6. Revisar Caducidad de los alimentos');
-	    writeln('7. Plan de comidas semanales');
-	    writeln('8. Salir');
-		writeln('Escoja una opción:');
-		readln(opc);
+    menuinicial;
+    first:= true;
+	repeat 
+    if first = false then menu else first := false;
+    readln(opc);
 		case opc of
 			'1':          //Productos en la nevera
 				begin
@@ -86,6 +83,7 @@ begin
 			'8': writeln('Ha abandonado el programa.');
 			else writeln('Esa no es una opción válida.');
 		end;	//fin del opc
+        
 	until opc = '8';
 	readln();
 end.
